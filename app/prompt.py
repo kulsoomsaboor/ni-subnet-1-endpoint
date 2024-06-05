@@ -1,6 +1,5 @@
 
 import os
-# from dotenv import load_dotenv
 
 from decouple import config
 
@@ -14,7 +13,7 @@ import asyncio, traceback
 async def query_network(synapse):
          # Configuration and Setup
 
-        # load_dotenv()  # This loads the environment variables from the .env file
+        # This loads the environment variables from the .env file
         mnemonic = config('MNEMONIC')
         wallet = Keypair.create_from_mnemonic(mnemonic)
         bt.trace()
